@@ -1,8 +1,32 @@
 <html>
     <head>
         <script src="js/sudoku.js"></script>
+        <link rel="stylesheet" href="css/sudoku.css">
     </head>
     <body>
-        <div id="sudoku-div" />
+        <div id="SudokuDiv" />
+        <script type="text/javascript">
+            window.onload = function () {
+                for (var i=0; i < 9; i++) {
+                    var row = document.createElement('div');
+                    row.className = "SudokuRowDiv";
+                    for (var j=0; j < 9; j++) {
+                       var input = document.createElement('div'); 
+                        input.className = "SudokuInputDiv";
+
+                        if (j % 3 == 2) {
+                            input.className += " " + "SudokuRightBorder";
+                        }
+
+                        if (i % 3 == 2) {
+                            input.className += " " + "SudokuBottomBorder";
+                        }
+
+                        row.appendChild(input);
+                    }
+                    document.getElementById('SudokuDiv').appendChild(row);
+                }
+            }
+        </script>
     </body>
 </html>

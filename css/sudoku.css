@@ -1,0 +1,28 @@
+#SudokuDiv {
+    width: 381px;
+    height: 381px; 
+    margin: auto;
+    border-collapse: collapse;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+.SudokuInputDiv {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid grey;
+    margin: 0px;
+    border-collapse: collapse;
+    padding: 0px;
+}
+.SudokuInputDiv.SudokuRightBorder {
+    border-right: 2px solid black;
+    border-collapse: collapse;
+}
+.SudokuInputDiv.SudokuBottomBorder {
+    border-bottom: 2px solid black;
+}
+.SudokuRowDiv {
+    display: block;
+    width: 381px;
+}
