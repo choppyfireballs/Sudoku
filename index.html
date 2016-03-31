@@ -11,18 +11,19 @@
                     var row = document.createElement('div');
                     row.className = "SudokuRowDiv";
                     for (var j=0; j < 9; j++) {
-                       var input = document.createElement('div'); 
-                        input.className = "SudokuInputDiv";
+                       var input = document.createElement('input'); 
+                       input.setAttribute('type', 'text');
+                       input.className = "SudokuInputDiv";
 
-                        if (j % 3 == 2) {
-                            input.className += " " + "SudokuRightBorder";
-                        }
+                       if (j % 3 == 2) {
+                           input.className += " " + "SudokuRightBorder";
+                       }
 
-                        if (i % 3 == 2) {
-                            input.className += " " + "SudokuBottomBorder";
-                        }
+                       if (i % 3 == 2) {
+                           input.className += " " + "SudokuBottomBorder";
+                       }
 
-                        row.appendChild(input);
+                       row.appendChild(input);
                     }
                     document.getElementById('SudokuDiv').appendChild(row);
                 }
