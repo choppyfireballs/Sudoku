@@ -11,9 +11,25 @@
                     var row = document.createElement('div');
                     row.className = "SudokuRowDiv";
                     for (var j=0; j < 9; j++) {
-                       var input = document.createElement('input'); 
-                       input.setAttribute('type', 'text');
+                       var input = document.createElement('div'); 
+                       //input.setAttribute('type', 'text');
                        input.className = "SudokuInputDiv";
+                        //table
+                        var table = document.createElement('table');
+                        for (var tablei=1; tablei < 10;) {
+                            //open table row`
+                            var tableRow = table.insertRow();
+                            for (var tablej=0; tablej < 3; tablej++) {
+                                //open table data
+                                var cell = tableRow.insertCell();
+                                //close table data 
+                                cell.innerHTML = tablei;
+                                tablei++;
+                            }
+                            //close table row
+                        }
+                        //close table
+                        input.appendChild(table);
 
                        if (j % 3 == 2) {
                            input.className += " " + "SudokuRightBorder";
