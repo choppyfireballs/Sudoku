@@ -22,6 +22,8 @@
                             for (var tablej=0; tablej < 3; tablej++) {
                                 //open table data
                                 var cell = tableRow.insertCell();
+                                cell.className = "AnnotationCell" + tablei;
+                                cell.className += " " + "AnnotationCell";
                                 //close table data 
                                 cell.innerHTML = tablei;
                                 tablei++;
